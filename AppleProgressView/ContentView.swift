@@ -32,13 +32,18 @@ struct ContentView: View {
 //        self.progress = progress
 //    }
     private var fullTrimSize: CGFloat {
+        //print("Full Trim Size is \(1 - CGFloat(self.sliceSize))")
         return 1 - CGFloat(self.sliceSize) //0.65
     }
     
     private var progressSize: CGFloat {
-        if fullTrimSize * CGFloat(self.progress) < 0.35 {
+        if (fullTrimSize * CGFloat(self.progress)) < 0.64 {
+            //print("now its:\(fullTrimSize * CGFloat(self.progress))")
             return fullTrimSize * CGFloat(self.progress)
+            
         } else {
+            //print("its full")
+            //print("FULL: \(fullTrimSize * CGFloat(self.progress))")
             return 0.65
         }
     }
