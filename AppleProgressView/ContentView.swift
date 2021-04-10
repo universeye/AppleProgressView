@@ -31,6 +31,19 @@ struct ContentView: View {
 //    init(_ progress: Double = 0.3) {
 //        self.progress = progress
 //    }
+//
+    
+    private func increment() {
+        withAnimation {
+            if self.progress < 1 {
+                self.progress += 0.25
+            } else {
+                self.progress = 1
+            }
+        }
+    }
+    
+    
     private var fullTrimSize: CGFloat {
         //print("Full Trim Size is \(1 - CGFloat(self.sliceSize))")
         return 1 - CGFloat(self.sliceSize) //0.65
@@ -51,11 +64,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button(action: {
-                if self.progress < 1 {
-                    self.progress += 0.25
-                } else {
-                    self.progress = 1
-                }
+                increment()
             }) {
                 Image(systemName: "star")
                     .font(.system(size: 40))
@@ -67,7 +76,7 @@ struct ContentView: View {
                             .trim(from: 0, to: fullTrimSize)
                             .stroke(self.strokeGradient, style: self.strokeStyle(with: geometry))
                             .opacity(0.5)
-                            //.animation(.easeInOut(duration: 1))
+                            .animation(nil)
                         Circle() //Progress Bar
                             .trim(from: 0, to: progressSize)
                             .stroke(self.strokeGradient, style: self.strokeStyle(with: geometry))
@@ -80,12 +89,12 @@ struct ContentView: View {
                             .font(.system(size: 0.4 * min(geometry.size.width, geometry.size.height), weight: .bold, design: .rounded))
                             .foregroundColor(Color.yellow)
                             //.offset(y: -0.05 * min(geometry.size.width, geometry.size.height))
-                            //.animation(.spring())
+                            .animation(nil)
                     } else {
                         Text(self.percentageFormatter.string(from: self.progress as NSNumber)!)
                             .font(.system(size: 0.3 * min(geometry.size.width, geometry.size.height), weight: .bold, design: .rounded))
                             //.offset(y: -0.05 * min(geometry.size.width, geometry.size.height))
-                            //.animation(.spring())
+                            .animation(nil)
                     }
                     
                     
