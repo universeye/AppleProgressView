@@ -1,5 +1,5 @@
 # AppleProgressView
-SwiftUI progress view inspired by Apple, with animation and some testing buttons
+SwiftUI progress view inspired by Apple, with animation and some configuration buttons
 
 # Preview
 
