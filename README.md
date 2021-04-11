@@ -5,6 +5,8 @@ SwiftUI progress view inspired by Apple, with animation and some configuration b
 
 ![](ReadmeSource/apple%20progress%20view%20demo.gif)
 
+![](ReadmeSource/appleprogressviewshort.gif)
+
 
 # Contributions
 
