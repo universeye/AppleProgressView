@@ -4,6 +4,7 @@ SwiftUI progress view inspired by Apple, with animation and some configuration b
 # Menu
 * [Preview](#preview)
 * [Contributions](#contributions)
+* [Contact](#contact)
 
 # Preview
 
