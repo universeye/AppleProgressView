@@ -18,4 +18,4 @@ SwiftUI progress view inspired by Apple, with animation and some configuration b
 * All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting & todo task) are welcome. Let's make it better.
 
 # Contact
-Created by [@ArgonYoYo](https://twitter.com/ArgonYoYo) - feel free to contact me!
+Created by [@yoyokuoo](https://twitter.com/yoyokuoo) - feel free to contact me!
